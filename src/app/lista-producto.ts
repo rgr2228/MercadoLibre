@@ -1,0 +1,7 @@
+import { Producto } from 'src/app/producto';
+
+export const PRODUCTOS: Producto[] = [
+  { id: 11, nombre: 'Dr Nice', precio:'1000' },
+  { id: 12, nombre: 'Narco', precio:'1000' },
+  { id: 13, nombre: 'Bombasto', precio:'1000' },
+];
