@@ -1,6 +1,19 @@
-<h2>Mis productos</h2>
-<ul>
-  <li *ngFor="let producto of productos">
-    {{producto.id}} {{producto.nombre}} {{producto.precio}}
-  </li>
-</ul>
+<h2>Raúl Gómez - Mercado libre</h2>
+<div>
+  Búsqueda
+  <br>
+  <input type="text" #prod class="form-control" placeholder="Ingrese su búsqueda"/>
+  <button (click)="getProducts(prod)">Buscar</button>
+</div>
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>Precio</td>
+    <td>Vendedor</td>
+  </tr>
+  <tr *ngFor="let producto of productos">
+    <td>{{producto.nombre}}</td>
+    <td>{{producto.precio}}</td>
+    <td>{{producto.vendedor}}</td>
+  </tr>
+</table>
