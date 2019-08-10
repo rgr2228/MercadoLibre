@@ -11,9 +11,9 @@
     <td>Precio</td>
     <td>Vendedor</td>
   </tr>
-  <tr *ngFor="let producto of productos">
-    <td>{{producto.nombre}}</td>
-    <td>{{producto.precio}}</td>
-    <td>{{producto.vendedor}}</td>
+  <tr *ngFor="let resul of resultado.results">
+    <td>{{resul.title}}</td>
+    <td>{{resul.price}}</td>
+    <td>{{resul.seller.id}}</td>
   </tr>
 </table>

@@ -11,17 +11,17 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AppComponent {
   title = 'app';
-  private resultado = null;
-  productos = PRODUCTOS;
+  resultado = null;
+  productos = [];
 
   constructor(private http:HttpClient) { }
 
   getProducts(prod){
-    this.http.get(`https://api.mercadolibre.com/sites/MCO/search?q=${prod.value}&access_token=APP_USR-1571889202014738-080917-26796bb0455c9b7e05d80cae249deb5f-381239892`)
+    this.http.get(`https://api.mercadolibre.com/sites/MCO/search?q=${prod.value}&access_token=APP_USR-1571889202014738-081005-85785a8c04c0ed8b5b1c30d7d109a736-381239892`)
     .subscribe(
       result=>{
         this.resultado=result;
-        console.log(result);
+        console.log(this.resultado);
       },
       error=>{
         console.log("Error");
