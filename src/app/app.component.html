@@ -7,11 +7,13 @@
 </div>
 <table>
   <tr>
-    <td>Nombre</td>
-    <td>Precio</td>
-    <td>Vendedor</td>
+    <th>Imagen</th>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>Vendedor</th>
   </tr>
   <tr *ngFor="let resul of resultado.results">
+    <td><img src="{{resul.thumbnail}}" alt="Avatar"></td>
     <td>{{resul.title}}</td>
     <td>{{resul.price}}</td>
     <td>{{resul.seller.id}}</td>
