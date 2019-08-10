@@ -11,11 +11,12 @@ export class AppComponent {
   title = 'app';
   resultado = null;
   productos = [];
+  seller=null;
 
   constructor(private http:HttpClient) { }
 
   getProducts(prod){
-    this.http.get(`https://api.mercadolibre.com/sites/MCO/search?q=${prod.value}&access_token=APP_USR-1571889202014738-081005-85785a8c04c0ed8b5b1c30d7d109a736-381239892`)
+    this.http.get(`https://api.mercadolibre.com/sites/MCO/search?q=${prod.value}`)
     .subscribe(
       result=>{
         this.resultado=result;
