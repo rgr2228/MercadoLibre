@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Producto } from 'src/app/producto';
-import { PRODUCTOS } from 'src/app/lista-producto';
 import {HttpClient} from "@angular/common/http";
 
 
